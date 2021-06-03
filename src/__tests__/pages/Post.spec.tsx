@@ -272,4 +272,12 @@ describe('Post', () => {
 
     screen.getByText('Carregando...');
   });
+
+  it('should be able to render Header component', () => {
+    const postProps = mockedGetByUIDReturn;
+
+    render(<Post post={postProps} />);
+
+    screen.getByAltText('logo');
+  });
 });
